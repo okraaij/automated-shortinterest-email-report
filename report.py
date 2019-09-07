@@ -1,3 +1,11 @@
+##############################
+#                            #
+#   Automated email report   #
+#          oliverk1          #
+#         July  2019         #
+#                            #
+##############################
+
 # Import packages
 import pyodbc, smtplib, time
 import pandas.io.sql
