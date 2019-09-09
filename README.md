@@ -24,7 +24,7 @@ Python script that extracts [short interest](https://www.investopedia.com/terms/
   - [statistics](https://docs.python.org/3/library/statistics.html)
   - [time](https://docs.python.org/2/library/time.html)
 - When compiling the email report, the script will compile the report based on the weekly differences. It will use the latest available data in the database and compile a weekly report based on that date. For example, today is Friday 20 September, but the latest available data in the database is from Wednesday 18 September, the report will compile the report from data between Wednesday 11 September and Wednesday 18 September. 
-- The report.py file can be used to run the file in a cloud environment, the report_manual_send.py file can be used to run the script manually. 
+- The [report.py] file can be used to run the file in a cloud environment, the [report_manual_send.py] file can be used to run the script manually. 
 - A separate script was used to check for new data and write that data to the database.
 - The script should be set to run through Windows Task Scheduler on weekdays and is designed to run remotely in a cloud environment.
 - Pseudocode for the entire setup on Monday - Thursday:
