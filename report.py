@@ -185,6 +185,7 @@ def runscript(datapoints):
         topincrease = result.sort_values('Percent', ascending=False).head(15)
         topdecrease = result.sort_values('Percent', ascending=True).head(15)
 
+        # Add tickers that have no data
         no_data = pd.DataFrame({'Ticker': no_data})
         no_data = pd.merge(no_data, fullname, how='left', on='Ticker')
         no_data = ", ".join(list(no_data['FullName']))
