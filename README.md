@@ -4,7 +4,7 @@ Python script that extracts short interest data from a database, checks whether 
 ## Overview
 
 - This repository contains a script that will run on weekdays and
-  - Check whether data has been updated on weekdays and send an email if the data was not updated
+  - Check whether data has been updated on weekdays and send an email if the data was not updated, requesting to update the data within 20 minutes
   - Compiles and send an automated email report on Fridays based on the weekly difference in values
 - The automated email report contains:
   - The top 15 companies with the highest short interest
