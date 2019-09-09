@@ -32,8 +32,9 @@ Python script that extracts [short interest](https://www.investopedia.com/terms/
   - if data has been updated:
     - do nothing
   - else (data was not updated):
-    - send email to request data to be updated
+    - send email to request data to be updated within 20 minutes
     - set timer for 30 minutes
+    - 15.25 external script checks whether new data was placed in folder, if yes write to database
   - 15.30 if data still has not been updated:
     - send email that data has not been updated
   - else (if data was updated):
@@ -44,7 +45,8 @@ Python script that extracts [short interest](https://www.investopedia.com/terms/
   - if data has been updated:
     - compile and send automated email report
   - else: 
-    - send email to request data to be updated
+    - send email to request data to be updated within 20 minutes
     - set timer for 30 minutes
+    - 15.25 external script checks whether new data was placed in folder, if yes write to database
   - 15.30:
     - compile and send automated email report with the latest available data, regardless of whether data has been updated
