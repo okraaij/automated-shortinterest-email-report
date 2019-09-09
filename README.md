@@ -1,5 +1,5 @@
 # Automated email report
-Python script that extracts [short interest](https://www.investopedia.com/terms/s/shortinterest.asp) data from a database, checks whether this has been updated on a daily base (weekdays) and subsequently compiles and sends an automated email report on Fridays.
+Python script that extracts [short interest](https://www.investopedia.com/terms/s/shortinterest.asp) data from a database, checks whether the data today has been updated on a daily base (weekdays) and subsequently compiles and sends an automated email report on Fridays containing a weekly update.
 
 ## Overview
 
