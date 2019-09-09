@@ -5,18 +5,26 @@ Python script that extracts short interest data from a database, checks whether 
 
 - This repository contains a script that will run on weekdays and
   - Check whether data has been updated on weekdays and send an email if the data was not updated, requesting to update the data within 20 minutes
-  - Compiles and send an automated email report on Fridays based on the weekly difference in values
+  - Compiles and send an automated email report on Fridays based on the weekly differences in values
 - The automated email report contains:
   - The top 15 companies with the highest short interest
   - The top 15 companies with the most days to cover
   - The top 15 weekly increases in short interest
   - The top 15 weekly decreases in short interest
   - Overview of companies that reported no data either this week or last week and thus have not been included in the report
-- The scripts use SQL and the following (external) Python packages/dependencies, read the documentation for the correct use of the packages:
-  - 
-- When compiling the email report, the script will compile the report based on the weekly difference. It will use the latest available data in the database and compile a weekly report based on that date. For example, today is Friday 20 September, but the latest available data in the database is from Wednesday 18 September. The report will then compile the report between data from Wednesday 11 September and Wednesday 18 September. 
-- A separate script was used to check for new data and write that data to the database on weekdays.
-- The script was set to run through Windows Task Scheduler on weekdays and is designed to run remotely in a cloud environment
+- The script uses the following (external) Python packages/dependencies, read the documentation for the correct use of the packages:
+  - [datetime](https://docs.python.org/3/library/datetime.html)
+  - [email](https://docs.python.org/3/library/email.html)
+  - [IPython](https://ipython.readthedocs.io/en/stable/)
+  - [numpy](https://docs.scipy.org/)
+  - [pandas](https://pandas.pydata.org/pandas-docs/stable/)
+  - [pyodbc](https://github.com/mkleehammer/pyodbc/wiki)
+  - [smtplib](https://docs.python.org/3/library/smtplib.html)
+  - [statistics](https://docs.python.org/3/library/statistics.html)
+  - [time](https://docs.python.org/2/library/time.html)
+- When compiling the email report, the script will compile the report based on the weekly differences. It will use the latest available data in the database and compile a weekly report based on that date. For example, today is Friday 20 September, but the latest available data in the database is from Wednesday 18 September, the report will compile the report from data between Wednesday 11 September and Wednesday 18 September. 
+- A separate script was used to check for new data and write that data to the database.
+- The script should be et to run through Windows Task Scheduler on weekdays and is designed to run remotely in a cloud environment
 
 - Pseudocode for the entire setup on Monday - Thursday:
   - 15.00 start script
