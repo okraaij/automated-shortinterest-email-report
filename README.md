@@ -1,11 +1,12 @@
 # Automated email report
-Python script that extracts short interest data from a database, checks whether this has been updated on a daily base (weekdays) and subsequently compiles and sends an automated email report on Fridays
+Python script that extracts [short interest](https://www.investopedia.com/terms/s/shortinterest.asp) data from a database, checks whether this has been updated on a daily base (weekdays) and subsequently compiles and sends an automated email report on Fridays
 
 ## Overview
 
 - This repository contains a script that will run on weekdays and
   - Check whether data has been updated on weekdays and send an email if the data was not updated, requesting to update the data within 20 minutes
   - Compiles and send an automated email report on Fridays based on the weekly differences in values
+- The data focuses on Dutch and Belgian exchange-listed companies
 - The automated email report contains:
   - The top 15 companies with the highest short interest
   - The top 15 companies with the most days to cover
